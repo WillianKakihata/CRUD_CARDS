@@ -1,9 +1,9 @@
-import { Column, Entity, ObjectId, ObjectIdColumn } from 'typeorm';
+import { Column, Entity, ObjectId, ObjectIdColumn, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
-export class deckCards {
+@Entity({ database : 'mongodb' })
+export class deckCardsEntity {
     @ObjectIdColumn()
-    id: ObjectId;
+    id: String;
   
     @Column()
     cartaComandante: string;
